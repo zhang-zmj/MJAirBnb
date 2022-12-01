@@ -29,8 +29,14 @@ _/
 命令 npm install normalize.css
 
 2、 reset.css
+自定义的文件
+
+### 四、Router 配置:
+
+1、安装命令： npm install react-router-dom
+
+2、
 3、
-6、
 7、
 8、
 9、
