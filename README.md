@@ -35,7 +35,10 @@ _/
 
 1、安装命令： npm install react-router-dom
 
-2、
+### 五、Redux 状态管理:
+
+1、安装命令： npm install @reduxjs/toolkit react-redux
+2、store -> 创建文件， 后在 index.js 中导入 Provider
 3、
 7、
 8、
