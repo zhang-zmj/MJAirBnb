@@ -39,6 +39,12 @@ _/
 
 1、安装命令： npm install @reduxjs/toolkit react-redux
 2、store -> 创建文件， 后在 index.js 中导入 Provider
+3、普通方式与@reduxjs/toolkit 方式共用
+
+### 六、网络请求 - axios:
+
+1、安装命令： npm install axios
+2、store -> 创建文件， 后在 index.js 中导入 Provider
 3、
 7、
 8、
