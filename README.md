@@ -45,8 +45,11 @@ _/
 
 1、安装命令： npm install axios
 2、store -> 创建文件， 后在 index.js 中导入 Provider
+
+### 六、安装样式组件:
+
+1、分析 Header 效果，定义方案，并创建文件
+2、安装命令： npm install styled-components
 3、
-7、
-8、
-9、
-10、
+4、
+5、
