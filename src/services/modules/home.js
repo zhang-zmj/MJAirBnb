@@ -6,3 +6,10 @@ export function getHomeGoodPriceData() {
   })
 }
 
+export function getHomeHighScoreData() {
+  return mjRequest.get({
+    url: "/home/highscore"
+  })
+}
+
+

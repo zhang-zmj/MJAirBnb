@@ -64,6 +64,7 @@ export const ItemWrapper = styled.div`
     .MuiRating-decimal{
        margin-right: -2px;
     }
+
   }
 
 `
