@@ -51,5 +51,8 @@ _/
 1、分析 Header 效果，定义方案，并创建文件
 2、安装命令： npm install styled-components
 3、建议安装插件： vscode-styled-components
-4、
-5、
+
+### 七、第三方 UI 库的安装:
+
+1、Ant Design 官方地址： https://ant.design/
+2、Material UI 官方地址： https://mui.com/zh

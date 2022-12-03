@@ -10,8 +10,7 @@ import "normalize.css"
 import "./assets/css/index.less"
 import store from './store';
 import theme from './assets/theme';
-
-
+// import "antd/dist/antd.less"
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
