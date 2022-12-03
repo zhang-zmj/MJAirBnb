@@ -50,6 +50,6 @@ _/
 
 1、分析 Header 效果，定义方案，并创建文件
 2、安装命令： npm install styled-components
-3、
+3、建议安装插件： vscode-styled-components
 4、
 5、
