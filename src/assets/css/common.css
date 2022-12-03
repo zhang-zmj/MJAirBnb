@@ -2,6 +2,13 @@ body {
   font-size: 14px;
   font-family: 'Circular', 'PingFang-SC', 'Hiragino Sans GB', '微软雅黑', 'Microsoft YaHei', 'Heiti SC';
   color: #484848;
+  /*
+  有时候双击或者多次点击一个地方，会出现一些蓝色的块
+    1、css解决方法，如下：
+    2、js解决方法： 
+      * 方式一：document.onselectstart=new Function("return false");
+      * 方式二：onselectstart="return false"
+  */
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
