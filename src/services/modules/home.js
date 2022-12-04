@@ -18,3 +18,8 @@ export function getHomeDiscounntData() {
   })
 }
 
+export function getHomeHotRecommendData() {
+  return mjRequest.get({
+    url: "/home/hotrecommenddest"
+  })
+}

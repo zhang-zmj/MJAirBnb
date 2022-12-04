@@ -8,8 +8,9 @@ import { SectionV2Wrapper } from './style'
 const HomeSectionV2 = memo(props => {
   const { infoData } = props
 
-  // 数据转换
-  const [name, setName] = useState('佛山')
+  /** 定义内部的state */
+  const initialName = Object.keys(infoData.dest_list)[0]
+  const [name, setName] = useState(initialName)
   const tabNames = infoData.dest_address?.map(item => item.name)
   const tabClickHandle = useCallback(function (index, name) {
     setName(name)

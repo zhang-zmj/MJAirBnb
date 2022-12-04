@@ -10,11 +10,12 @@ import { isEmptyO } from '@/utils'
 
 const Home = memo(() => {
   /*2、从redux中获取数据 */
-  const { goodPriceInfo, highScoreInfo, discountInfo } = useSelector(
+  const { goodPriceInfo, highScoreInfo, discountInfo, recommendInfo } = useSelector(
     state => ({
       goodPriceInfo: state.home.goodPriceInfo,
       highScoreInfo: state.home.highScoreInfo,
-      discountInfo: state.home.discountInfo
+      discountInfo: state.home.discountInfo,
+      recommendInfo: state.home.recommendInfo
     }),
     shallowEqual
   )
@@ -29,8 +30,8 @@ const Home = memo(() => {
     <HomeWrapper>
       <HomeBanner />
       <div className="content">
-        <div className="discount"></div>
         {isEmptyO(discountInfo) && <HomeSectionV2 infoData={discountInfo} />}
+        {isEmptyO(recommendInfo) && <HomeSectionV2 infoData={recommendInfo} />}
         {isEmptyO(goodPriceInfo) && <HomeSectionV1 infoData={goodPriceInfo} />}
         {isEmptyO(highScoreInfo) && <HomeSectionV1 infoData={highScoreInfo} />}
       </div>
