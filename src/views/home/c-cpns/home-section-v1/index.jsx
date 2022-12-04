@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { SectionV1Wrapper } from './style'
 import SectionRooms from '@/components/section-rooms'
 import SectionHeader from '@/components/section-header'
+import SectoinFooter from '@/components/section-footer'
 
 const HomeSectionV1 = memo(props => {
   const { infoData } = props
@@ -10,6 +11,7 @@ const HomeSectionV1 = memo(props => {
     <SectionV1Wrapper>
       <SectionHeader title={infoData.title ?? ''} subtitle={infoData.subtitle ?? ''} />
       <SectionRooms roomList={infoData.list ?? []} itemWidth="25%" />
+      <SectoinFooter />
     </SectionV1Wrapper>
   )
 })
