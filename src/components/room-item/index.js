@@ -8,7 +8,9 @@ const RoomItem = memo((props) => {
   const { itemData, itemWidth } = props
 
   return (
-    <ItemWrapper verifyColor={itemData?.verify_info?.text_color || "#39576a"} itemWidth={itemWidth}>
+    <ItemWrapper
+      verifyColor={itemData?.verify_info?.text_color || "#39576a"}
+      itemWidth={itemWidth}>
       <div className='inner'>
         <div className='cover'>
           <img src={itemData.picture_url} alt="" />

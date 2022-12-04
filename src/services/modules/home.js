@@ -12,4 +12,9 @@ export function getHomeHighScoreData() {
   })
 }
 
+export function getHomeDiscounntData() {
+  return mjRequest.get({
+    url: "/home/discount"
+  })
+}
 
