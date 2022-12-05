@@ -56,10 +56,10 @@ export const ItemWrapper = styled.div`
         align-items: center;
         width: 83px;
         height: 100%;
-        background: linear-gradient(to left, transparent 0%, rgba(0,0,0,0.5), 100% );
+        background: linear-gradient(to left, rgba(0,0,0,0), rgba(0,0,0,.6) 100%);
 
         &.right{
-          background: linear-gradient(to right, transparent 0%, rgba(0,0,0,0.5), 100% );
+          background:  linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,.6) 100%);
         }
       } 
 
