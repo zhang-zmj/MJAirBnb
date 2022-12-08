@@ -6,14 +6,24 @@ import Rating from '@mui/material/Rating'
 import { Carousel } from 'antd'
 import IconArrowLeft from '@/assets/svg/icon-arrow-left'
 import IconArrowRight from '@/assets/svg/icon-arrow-right'
-import { useRef } from 'react'
+import { useRef, useState } from 'react'
+import Indicator from '@/base-ui/indicator'
+import classNames from 'classnames'
 
 const RoomItem = memo(props => {
-  const { itemData, itemWidth } = props
+  const { itemData, itemWidth = '25%' } = props
+  const [selectIndex, setSelectIndex] = useState(0)
   const sliderRef = useRef()
 
   function controlClickHandle(isRight = true) {
     isRight ? sliderRef.current.next() : sliderRef.current.prev()
+
+    //获取点中之后的索引
+    let newIndex = isRight ? selectIndex + 1 : selectIndex - 1
+    let lenght = itemData.picture_urls.lenght
+    if (newIndex < 0) newIndex = lenght - 1
+    if (newIndex < lenght - 1) newIndex = 0
+    setSelectIndex(newIndex)
   }
 
   return (
@@ -28,6 +38,19 @@ const RoomItem = memo(props => {
               <IconArrowRight width="30" height="30" />
             </div>
           </div>
+
+          <div className="indicator">
+            <Indicator selectIndex={selectIndex}>
+              {itemData?.picture_urls?.map((item, index) => {
+                return (
+                  <div className="item" key={item}>
+                    <span className={classNames('dot', { active: selectIndex === index })}></span>
+                  </div>
+                )
+              })}
+            </Indicator>
+          </div>
+
           <Carousel dots={false} ref={sliderRef}>
             {itemData?.picture_urls?.map(item => {
               return (
