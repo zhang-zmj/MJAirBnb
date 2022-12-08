@@ -29,7 +29,7 @@ export const ItemWrapper = styled.div`
 
   }
 
-  .swiper {
+  .slider {
     position: relative;
     cursor: pointer;
 
