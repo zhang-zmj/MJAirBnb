@@ -43,8 +43,7 @@ const DetailPictures = memo(props => {
       >
         显示照片
       </div>
-      {showBrower && <PicturesWrapper />}
-      <PictureBrower />
+      {showBrower && <PictureBrower pictureUrls={detailInfo.picture_urls} closeClick={e => setShowBrower(false)} />}
     </PicturesWrapper>
   )
 })
