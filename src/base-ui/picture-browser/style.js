@@ -71,6 +71,27 @@ export const BrowerWrapper = styled.div`
 
       }
 
+      //动画的样式
+      .pic-enter{
+        //相对于之前的大小
+        transform: translateX(${props => props.isNext ? "100%" : "-100%"});
+        opacity: 0;
+      }
+      .pic-enter-active{
+        transform: translate(0);
+        opacity: 1;
+        transition: all 200ms ease;
+      }
+
+      .pic-eixt{
+        transform: translate(0);
+        opacity: 1;
+      }
+
+      .pic-eixt-active{
+        opacity: 0;
+        transition: all 200ms ease;
+      }
     }
 
   }

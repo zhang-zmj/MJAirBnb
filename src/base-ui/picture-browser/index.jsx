@@ -3,12 +3,13 @@ import IconArrowRight from '@/assets/svg/icon-arrow-right'
 import IconClose from '@/assets/svg/icon_close'
 import PropTypes from 'prop-types'
 import React, { memo, useEffect, useState } from 'react'
+import { SwitchTransition, CSSTransition } from 'react-transition-group'
 import { BrowerWrapper } from './style'
 
 const PictureBrower = memo(props => {
   const { pictureUrls, closeClick } = props
-
   const [currentIndex, setCurrentIndex] = useState(0)
+  const [isNext, setIsNext] = useState(true)
 
   useEffect(() => {
     document.body.style.overflow = 'hidden'
@@ -31,16 +32,17 @@ const PictureBrower = memo(props => {
       newIndex = 0
     }
     setCurrentIndex(newIndex)
+    setIsNext(isNext)
   }
 
   return (
-    <BrowerWrapper>
+    <BrowerWrapper isNext={isNext}>
       <div className="top">
         <div className="close-btn" onClick={closeBtnClickHandle}>
           <IconClose />
         </div>
       </div>
-      
+
       <div className="slider">
         <div className="control">
           <div className="btn left" onClick={e => changeCurrentIndex(false)}>
@@ -52,7 +54,11 @@ const PictureBrower = memo(props => {
         </div>
 
         <div className="picture">
-          <img src={pictureUrls[currentIndex]} alt="" />
+          <SwitchTransition mode="in-out">
+            <CSSTransition key={pictureUrls[currentIndex]} className="pic" timeout="200">
+              <img src={pictureUrls[currentIndex]} alt="" />
+            </CSSTransition>
+          </SwitchTransition>
         </div>
       </div>
 
