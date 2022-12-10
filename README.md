@@ -15,14 +15,6 @@
 
 - 到 github 上搜索 craco-less，并进行安装
 
-/_
-依赖版本：
-create-react-app： 3.4.1
-antd： 4.2.4
-@babel/plugin-proposal-decorators​​​​​​​： 7.8.3
-babel-plugin-import​​​​​​​： 1.13.0
-_/
-
 ### 三、对默认 CSS 样式进行重置:
 
 1、 normalize.css
