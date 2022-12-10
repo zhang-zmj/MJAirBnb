@@ -15,7 +15,7 @@ const RoomItem = memo(props => {
   const [selectIndex, setSelectIndex] = useState(0)
   const sliderRef = useRef()
 
-  function controlClickHandle(isRight = true) {
+  function controlClickHandle(isRight = true, event) {
     isRight ? sliderRef.current.next() : sliderRef.current.prev()
 
     //获取点中之后的索引
@@ -24,6 +24,9 @@ const RoomItem = memo(props => {
     if (newIndex < 0) newIndex = lenght - 1
     if (newIndex < lenght - 1) newIndex = 0
     setSelectIndex(newIndex)
+
+    //阻止事件冒泡
+    event.stopPropagation()
   }
 
   //子元素的赋值
@@ -36,10 +39,10 @@ const RoomItem = memo(props => {
   const sliderElment = (
     <div className="slider">
       <div className="control">
-        <div className="btn left" onClick={e => controlClickHandle(false)}>
+        <div className="btn left" onClick={e => controlClickHandle(false, e)}>
           <IconArrowLeft width="30" height="30" />
         </div>
-        <div className="btn right" onClick={e => controlClickHandle(true)}>
+        <div className="btn right" onClick={e => controlClickHandle(true, e)}>
           <IconArrowRight width="30" height="30" />
         </div>
       </div>
