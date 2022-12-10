@@ -30,9 +30,10 @@ const EntireRoom = memo(props => {
   return (
     <RoomWrapper>
       <h2 className="title">共{totalCount}出处所</h2>
+
       <div className="list">
         {roomList.map(item => {
-          return <RoomItem itemData={item} itemWidth="20%" key={item.id} itemClick={itemClickHandle} />
+          return <RoomItem itemData={item} itemWidth="20%" key={item._id} itemClick={itemClickHandle} />
         })}
       </div>
       {isLoading && <div className="cover"></div>}

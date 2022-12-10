@@ -62,7 +62,7 @@ const RoomItem = memo(props => {
       <Carousel dots={false} ref={sliderRef}>
         {itemData?.picture_urls?.map(item => {
           return (
-            <div className="cover">
+            <div className="cover" key={item}>
               <img src={itemData.picture_url} alt="" />
             </div>
           )

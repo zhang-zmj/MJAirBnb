@@ -11,7 +11,7 @@ const Entire = memo(() => {
   //发送网络请求，获取数据，并且保存当前的页面等等
   const dispatch = useDispatch()
   useEffect(() => {
-    dispatch(fetchRoomListAction('xxx'))
+    dispatch(fetchRoomListAction())
     dispatch(changeHeaderConfigAction({ isFixed: true }))
   }, [dispatch])
 
